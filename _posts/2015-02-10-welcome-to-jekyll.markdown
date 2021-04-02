@@ -10,15 +10,15 @@ mathjax: true
 
 
 ##主体流程
-使用来自[Gaohaoyang]https://github.com/xudailong/xudailong.github.io 的模板
-参照：	https://github.com/xudailong/xudailong.github.io  这是博主的github开源项目，但现在中文版安装流程打不开，可以参照下边的链接
-		https://blog.csdn.net/xudailong_blog/article/details/78762262  这个链接中介绍的比较详细，并且是中文
-		但是不管是博主的，还是介绍的时间都比较久了，各种软件的版本已经更新多代，搭建环境的过程中遇到了一些文中没有的坑，还有一些没接触过的细节
+使用来自[Gaohaoyang]https://github.com/xudailong/xudailong.github.io 的模板  
+参照：https://github.com/xudailong/xudailong.github.io  这是博主的github开源项目，但现在中文版安装流程打不开，可以参照下边的链接  
+      https://blog.csdn.net/xudailong_blog/article/details/78762262  这个链接中介绍的比较详细，并且是中文
+但是不管是博主的，还是介绍的时间都比较久了，各种软件的版本已经更新多代，搭建环境的过程中遇到了一些文中没有的坑，还有一些没接触过的细节
 		
 ##坑
-1.servlet.rb:3:in 'require': cannot load such file -- webrick (LoadError)
-	错误出现在启动jekyll服务，也就是控制台输入`jekyll serve`
-	结果如下：
+1.servlet.rb:3:in 'require': cannot load such file -- webrick (LoadError)  
+	错误出现在启动jekyll服务，也就是控制台输入`jekyll serve`  
+	结果如下：  
 ```
 /home/argilo/.gem/ruby/3.0.0/gems/jekyll-4.2.0/lib/jekyll/commands/serve/servlet.rb:3:in `require': cannot load such file -- webrick (LoadError)
 	from /home/argilo/.gem/ruby/3.0.0/gems/jekyll-4.2.0/lib/jekyll/commands/serve/servlet.rb:3:in `<top (required)>'
@@ -53,9 +53,10 @@ mathjax: true
 	from /home/argilo/.rubies/ruby-3.0.0/bin/bundle:23:in `load'
 	from /home/argilo/.rubies/ruby-3.0.0/bin/bundle:23:in `<main>'
 ```
+
 	原因：Ruby3.0 的gem中不再绑定webrick
 	解决方案：控制台输入`bundle add webrick`，将webrick作为一个依赖
-	参照：https://github.com/jekyll/jekyll/issues/8523
+	参照：https://github.com/jekyll/jekyll/issues/8523  
 	
 2.缺少其他的gem
 	解决方案：gem install 包名
