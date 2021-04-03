@@ -1,0 +1,29 @@
+I"�<ul id="markdown-toc">
+  <li><a href="#主体流程" id="markdown-toc-主体流程">主体流程</a></li>
+  <li><a href="#坑" id="markdown-toc-坑">坑</a></li>
+</ul>
+<h2 id="主体流程">主体流程</h2>
+
+<ul>
+  <li>
+    <p>使用来自<a href="https://github.com/xudailong/xudailong.github.io">Gaohaoyang</a> 的模板</p>
+  </li>
+  <li>参照：<a href="https://github.com/xudailong/xudailong.github.io">Gaohaoyang</a>  这是博主的github开源项目，但现在中文版安装流程打不开，可以参照 <a href="https://blog.csdn.net/xudailong_blog/article/details/78762262">中文版链接</a>  这个链接中介绍的比较详细，并且是中文 。</li>
+  <li>
+    <p>但是不管是博主的，还是介绍的时间都比较久了，各种软件的版本已经更新多代，搭建环境的过程中遇到了一些文中没有的坑，还有一些没接触过的细节。</p>
+  </li>
+  <li>配置本地环境Ruby-jekyll的目的是方便在本地修改展示效果直到确保正确再push。</li>
+</ul>
+
+<h2 id="坑">坑</h2>
+
+<ol>
+  <li>无法加载webrick</li>
+</ol>
+
+<ul>
+  <li>原因：Ruby3.0 的gem中不再绑定webrick</li>
+  <li>解决方案：控制台输入<code class="language-plaintext highlighter-rouge">bundle add webrick</code>，将webrick作为一个依赖</li>
+  <li>参照：<a href="https://github.com/jekyll/jekyll/issues/8523">https://github.com/jekyll/jekyll/issues/8523</a></li>
+</ul>
+:ET
